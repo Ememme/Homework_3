@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.clock {
+  height: 20vh;
+  color: #afeeee;
+  font-size: 22vh;
+  font-family: 'Orbitron', sans-serif;
+  display: flex;
+  min-width: 400px;
+  width: 60%;
+  justify-content: center;
+}
+
+.clock>* {
+  min-width: 200px;
+  flex: 0 1 auto;
+  text-shadow: 0px 2px 25px rgba(144, 244, 253, .6);
+}
+
+@keyframes blink {
+  from {
+    opacity: 1.0;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  to {
+    opacity: 1.0;
+  }
+}
+
+@-webkit-keyframes blink {
+  from {
+    opacity: 1.0;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  to {
+    opacity: 1.0;
+  }
+}
+
+.clock__colon {
+  min-width: 40px;
+  align-self: center;
+  -webkit-animation: blink 2s infinite;
+  animation: blink 2s infinite;
+}
+
+.clock__meridian {
+  text-transform: uppercase;
+  margin-left: 20px;
+}

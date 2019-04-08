@@ -13,7 +13,6 @@
 // Operowac generatorami
 
 // Declaring variables
-// 
 const hoursContainer = document.querySelector('.clock__hours');
 const minutesContainer = document.querySelector('.clock__minutes');
 const secondsContainer = document.querySelector('.clock__seconds');
@@ -36,13 +35,11 @@ let meridian = getCurrentTime.toLocaleTimeString('en-US').slice(-2);
 })();
 
 // Define generators
-
 function* secondsGen() {
     while (true) {
         seconds++
-        //   console.log(`Seconds: ${seconds}`);
+        
         if (seconds > 59) {
-            console.log(`Petla z 59`)
             seconds = 00;
             minutesIterator.next();
         }
@@ -68,9 +65,7 @@ function* hoursGen() {
             hours = hours - 12;
             yield meridianIterator.next();
         }
-
-        yield hours;
-        
+        yield hours;        
     }
 }
 

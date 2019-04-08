@@ -21,17 +21,15 @@ body {
 .clock {
   height: 20vh;
   color: #afeeee;
-  font-size: 22vh;
+  font-size: 100px;
   font-family: 'Orbitron', sans-serif;
   display: flex;
-  min-width: 400px;
-  width: 80%;
-  justify-content: center;
+  max-width: 90vw;
+  justify-content: space-evenly;
 }
 
 .clock>* {
   min-width: 200px;
-  flex: 0 1 auto;
   text-shadow: 0px 2px 25px rgba(144, 244, 253, .6);
 }
 
@@ -65,12 +63,11 @@ body {
 
 .clock__colon {
   min-width: 40px;
-  align-self: center;
   -webkit-animation: blink 2s infinite;
   animation: blink 2s infinite;
 }
 
 .clock__meridian {
   text-transform: uppercase;
-  margin-left: 20px;
+  margin-left: 5%;
 }
